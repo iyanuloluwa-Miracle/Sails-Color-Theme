@@ -1,7 +1,7 @@
 {
-  "name": "sails-color-theme",
-  "displayName": "Sails Color Theme",
-  "description": "A clean and modern color theme for VS Code",
+  "name": "sails-theme",
+  "displayName": "Sails Theme",
+  "description": "A professional and modern theme for VS Code with dark, light, and system variants",
   "version": "1.0.0",
   "publisher": "your-publisher-name",
   "engines": {
@@ -13,15 +13,33 @@
   "contributes": {
     "themes": [
       {
-        "label": "Sails Color Theme",
+        "label": "Sails Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/Sails-Color-Theme-color-theme.json"
+        "path": "./themes/sails-theme.json"
       },
       {
-        "label": "Sails Color Theme Light",
+        "label": "Sails Theme Light",
         "uiTheme": "vs",
-        "path": "./themes/Sails-Color-Theme-light-color-theme.json"
+        "path": "./themes/sails-theme.json"
+      },
+      {
+        "label": "Sails Theme (System)",
+        "uiTheme": "vs",
+        "path": "./themes/sails-theme.json"
       }
     ]
-  }
+  },
+  "keywords": [
+    "theme",
+    "dark theme",
+    "light theme",
+    "system theme",
+    "sails",
+    "professional"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sails-theme"
+  },
+  "license": "MIT"
 }
