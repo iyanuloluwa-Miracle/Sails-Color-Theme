@@ -1,0 +1,21 @@
+{
+  "name": "sails-color-theme",
+  "displayName": "Sails Color Theme",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dark+ or Light+ (choose dark for a dev-friendly terminal-like feel)",
+        "uiTheme": "vs",
+        "path": "./themes/Dark+ or Light+ (choose dark for a dev-friendly terminal-like feel)-color-theme.json"
+      }
+    ]
+  }
+}
