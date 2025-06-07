@@ -1,10 +1,11 @@
 {
   "name": "sails-color-theme",
   "displayName": "Sails Color Theme",
-  "description": "",
-  "version": "0.0.1",
+  "description": "A clean and modern color theme for VS Code",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Themes"
@@ -12,9 +13,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Dark+ or Light+ (choose dark for a dev-friendly terminal-like feel)",
+        "label": "Sails Color Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Sails-Color-Theme-color-theme.json"
+      },
+      {
+        "label": "Sails Color Theme Light",
         "uiTheme": "vs",
-        "path": "./themes/Dark+ or Light+ (choose dark for a dev-friendly terminal-like feel)-color-theme.json"
+        "path": "./themes/Sails-Color-Theme-light-color-theme.json"
       }
     ]
   }
