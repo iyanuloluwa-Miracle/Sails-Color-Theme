@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/your-publisher-name.sails-theme)](https://marketplace.visualstudio.com/items?itemName=your-publisher-name.sails-theme)
 [![Rating](https://img.shields.io/visual-studio-marketplace/r/your-publisher-name.sails-theme)](https://marketplace.visualstudio.com/items?itemName=your-publisher-name.sails-theme)
 
-A professional, modern VS Code theme designed for optimal readability and reduced eye strain. Sails Theme offers carefully crafted color schemes in dark, light, and system-adaptive variants.
+A professional, modern VS Code theme designed for optimal readability and reduced eye strain. Sails Theme offers carefully crafted color schemes in dark, light, and system-adaptive variants, inspired by the Sails.js framework's aesthetic.
 
 ![Sails Theme Preview](images/preview.png)
 
@@ -15,22 +15,28 @@ A professional, modern VS Code theme designed for optimal readability and reduce
   - **Sails Light**: Perfect for bright workspaces
   - **Sails System**: Automatically adapts to your OS theme preferences
 - 🎯 Language-optimized syntax highlighting
-- 👀 High-contrast ratios for better readability
+- 👀 High-contrast ratios for better readability (WCAG 2.1 AA compliant)
 - 🖥️ Consistent UI elements across all VS Code panels
 - ⚡ Semantic token support
 - 🔄 Smooth transitions between theme variants
 
-## Installation
+## Quick Start
 
+### Installation
+
+#### From VS Code Marketplace
 1. Launch VS Code
 2. Open the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`)
 3. Search for "Sails Theme"
 4. Click Install
 
-Alternatively, you can install it directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=your-publisher-name.sails-theme).
+#### From VSIX File (Development)
+```bash
+# Install from local VSIX
+code --install-extension sails-theme-1.0.0.vsix
+```
 
-## Usage
-
+### Activation
 1. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. Type "Color Theme"
 3. Choose one of:
@@ -38,49 +44,140 @@ Alternatively, you can install it directly from the [VS Code Marketplace](https:
    - "Sails Theme Light" (Light variant)
    - "Sails Theme (System)" (Follows system preferences)
 
+## Testing Guide
+
+### Local Development Testing
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sails-theme.git
+   cd sails-theme
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Package the extension:
+   ```bash
+   vsce package
+   ```
+
+4. Install in VS Code:
+   ```bash
+   code --install-extension sails-theme-1.0.0.vsix
+   ```
+
+### Theme Testing Checklist
+
+#### 1. Basic UI Elements
+- [ ] Activity Bar visibility and contrast
+- [ ] Sidebar readability
+- [ ] Status Bar information clarity
+- [ ] Panel titles and borders
+- [ ] Tab active/inactive states
+- [ ] Breadcrumbs navigation
+
+#### 2. Editor Testing
+- [ ] General text readability
+- [ ] Line numbers visibility
+- [ ] Current line highlight
+- [ ] Selection highlight
+- [ ] Find/Replace highlights
+- [ ] Bracket matching
+- [ ] Indentation guides
+
+#### 3. Syntax Highlighting
+Test with these file types:
+- [ ] JavaScript/TypeScript
+- [ ] HTML/CSS
+- [ ] JSON/YAML
+- [ ] Markdown
+- [ ] Python
+- [ ] Java
+- [ ] XML
+
+Check these elements:
+- [ ] Comments
+- [ ] Strings
+- [ ] Numbers
+- [ ] Keywords
+- [ ] Functions
+- [ ] Classes
+- [ ] Variables
+- [ ] Constants
+
+#### 4. System Integration
+- [ ] Dark mode transition
+- [ ] Light mode transition
+- [ ] System theme sync
+- [ ] High contrast mode compatibility
+
+#### 5. Accessibility Testing
+- [ ] Color contrast ratios (WCAG 2.1 AA)
+- [ ] Text readability in all sizes
+- [ ] Icon visibility
+- [ ] Error/warning highlighting
+- [ ] Link visibility
+
 ## Color Palette
 
 ### Dark Theme
-- Background: `#001c20`
-- Foreground: `#8adae6`
-- Accent: `#14acc2`
-- Comments: `#2e484f`
-- Strings: `#0c8da0`
-- Keywords: `#14acc2`
-- Functions: `#14acc2`
-- Variables: `#8adae6`
+- Primary: `#47B4D1` (Sails Blue)
+- Background: `#1B2B34` (Deep Ocean)
+- Foreground: `#CDD3DE` (Soft Silver)
+- Comments: `#627483` (Slate)
+- Strings: `#99C794` (Seafoam)
+- Keywords: `#47B4D1` (Sails Blue)
+- Functions: `#47B4D1` (Sails Blue)
+- Constants: `#FAC863` (Golden Sand)
+- Error: `#EC5F67` (Coral Red)
 
 ### Light Theme
-- Background: `#ffffff`
-- Foreground: `#001c20`
-- Accent: `#14acc2`
-- Comments: `#6e8a91`
-- Strings: `#0c8da0`
-- Keywords: `#14acc2`
-- Functions: `#14acc2`
-- Variables: `#006d7d`
+- Primary: `#47B4D1` (Sails Blue)
+- Background: `#FFFFFF` (Pure White)
+- Foreground: `#1B2B34` (Deep Ocean)
+- Comments: `#A7ADBA` (Cool Gray)
+- Strings: `#99C794` (Seafoam)
+- Keywords: `#47B4D1` (Sails Blue)
+- Functions: `#47B4D1` (Sails Blue)
+- Constants: `#F99157` (Sunset Orange)
+- Error: `#EC5F67` (Coral Red)
 
-## Supported Languages
-
-Optimized syntax highlighting for:
-- JavaScript/TypeScript
-- Python
-- Java
-- C/C++
-- HTML/CSS
-- JSON
-- Markdown
-- And many more...
+The color palette is carefully crafted to match the Sails.js brand identity while ensuring optimal readability and reduced eye strain. Each color has been selected to maintain WCAG 2.1 AA contrast ratios and provide a consistent, professional development experience.
 
 ## Customization
 
+### Custom Settings
 To customize specific colors, add the following to your `settings.json`:
 
 ```json
 {
   "workbench.colorCustomizations": {
     "[Sails Theme]": {
-      // Your customizations here
+      // Dark theme customizations
+      "editor.background": "#1B2B34",
+      "editor.foreground": "#CDD3DE"
+    },
+    "[Sails Theme Light]": {
+      // Light theme customizations
+      "editor.background": "#FFFFFF",
+      "editor.foreground": "#1B2B34"
+    }
+  }
+}
+```
+
+### Token Customization
+For syntax highlighting customization:
+
+```json
+{
+  "editor.tokenColorCustomizations": {
+    "[Sails Theme]": {
+      "comments": "#627483",
+      "strings": "#99C794",
+      "keywords": "#47B4D1"
     }
   }
 }
@@ -93,12 +190,14 @@ We welcome contributions! Please follow these steps:
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Submit a pull request
+4. Run the test checklist
+5. Submit a pull request
 
 Please ensure your PR adheres to:
 - Consistent color palette usage
 - Maintaining WCAG 2.1 AA contrast ratios
 - Following semantic naming conventions
+- Passing all test checklist items
 
 ## Development
 
@@ -119,7 +218,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Inspired by maritime themes and professional IDEs
+- Inspired by [Sails.js](https://sailsjs.com/) framework's design
 - Color science research from [Color Research and Application Journal](https://onlinelibrary.wiley.com/journal/15206378)
 - Feedback from the VS Code community
 
